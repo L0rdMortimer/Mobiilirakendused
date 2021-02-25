@@ -11,11 +11,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:minWidth="25px"
-        android:minHeight="25px"
         android:id="@+id/textView1" />
     <Button
-        android:text="Button"
+        android:text="@string/counter_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button1" />
@@ -26,9 +24,19 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView2" />
     <Button
-        android:text="To Calculator "
+        android:text="@string/to_calculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/toCalculator" />
+    <Button
+        android:text="@string/to_webview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toWeb" />
+    <Button
+        android:text="@string/to_essentials"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/to_Essentials" />
 
 </LinearLayout>

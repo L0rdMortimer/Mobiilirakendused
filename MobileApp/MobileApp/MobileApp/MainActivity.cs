@@ -22,13 +22,14 @@ namespace MobileApp
             var button = FindViewById<Button>(Resource.Id.button1);
             int counter = 0;
             var toCalculatorButton = FindViewById<Button>(Resource.Id.toCalculator);
+            var toWebButton = FindViewById<Button>(Resource.Id.toWeb);
+            var toEssentialsButton = FindViewById<Button>(Resource.Id.to_Essentials);
 
             button.Click += delegate
             {
                 textView.Text = "Hello Worms";
                 counter += 1;
-                counterView.Text = counter.ToString();
-                
+                counterView.Text = counter.ToString();                
             };
 
             toCalculatorButton.Click += delegate
@@ -37,6 +38,18 @@ namespace MobileApp
                 StartActivity(intent);
             };
 
+            toWebButton.Click += delegate
+            {
+                Intent intent = new Intent(this, typeof(WebActivity));
+                intent.PutExtra(Constants.AddressKey, Constants.DefaultUrl);
+                StartActivity(intent);
+            };
+
+            toEssentialsButton.Click += delegate
+            {
+                Intent intent = new Intent(this, typeof(EssentialsActivity));
+                StartActivity(intent);
+            };
 
 
         }

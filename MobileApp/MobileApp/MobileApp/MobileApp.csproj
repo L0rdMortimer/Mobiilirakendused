@@ -61,10 +61,16 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccelerometerActivity.cs" />
     <Compile Include="CalculatorActivity.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="EssentialsActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleWebViewClient.cs" />
+    <Compile Include="VibrateActivity.cs" />
+    <Compile Include="WebActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -108,6 +114,26 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\calculator_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\web_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\essentials_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\accelerometer_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\vibrate_layout.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
