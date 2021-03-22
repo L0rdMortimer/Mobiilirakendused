@@ -12,20 +12,19 @@ using System.Text;
 namespace MobileApp
 {
     [Activity(Label = "SampleListActivity")]
-    public class SampleListActivity : ListActivity
+    public class SampleListActivity : Activity
     {
         string[] items;
         //List<Car> items;
         protected override void OnCreate(Bundle savedInstanceState)
-        {
+        { 
             base.OnCreate(savedInstanceState);   
-            //SetContentView(Resource.Layout.simplelist_layout);
+            SetContentView(Resource.Layout.simplelist_layout);
             // Create your application here
             
-            //var listView = FindViewById<ListView>(Resource.Id.carListView);
+            var listView = FindViewById<ListView>(Resource.Id.carList);
             items = new string[] { "Volvo", "Subaru", "Audi" };
-            ListAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleExpandableListItem1, items);
-            //listView.Adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, items);
+            listView.Adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, items);
 
 
             //items = new List<Car>
