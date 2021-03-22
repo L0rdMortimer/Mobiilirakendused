@@ -63,11 +63,14 @@
   <ItemGroup>
     <Compile Include="AccelerometerActivity.cs" />
     <Compile Include="CalculatorActivity.cs" />
+    <Compile Include="CarAdapter.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="EssentialsActivity.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Model\Car.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SampleListActivity.cs" />
     <Compile Include="SimpleWebViewClient.cs" />
     <Compile Include="VibrateActivity.cs" />
     <Compile Include="WebActivity.cs" />
@@ -134,6 +137,16 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\vibrate_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\simplelist_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\car_row_layout.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

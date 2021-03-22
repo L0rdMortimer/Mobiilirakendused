@@ -11,18 +11,18 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1" />
+        android:id="@+id/welcomeText" />
     <Button
         android:text="@string/counter_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button1" />
+        android:id="@+id/counterButton" />
     <TextView
         android:text="Small Text"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2" />
+        android:id="@+id/counterText" />
     <Button
         android:text="@string/to_calculator"
         android:layout_width="wrap_content"
@@ -37,6 +37,11 @@
         android:text="@string/to_essentials"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/to_Essentials" />
+        android:id="@+id/toEssentials" />
+    <Button
+        android:text="@string/to_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toList" />
 
 </LinearLayout>

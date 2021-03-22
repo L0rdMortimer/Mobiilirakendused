@@ -22,10 +22,11 @@ namespace MobileApp
 
             // Create your application here
 
-            var accelerometerButton = FindViewById<Button>(Resource.Id.accelerometerButton);
+            var accelerometerButton = FindViewById<Button>(Resource.Id.toAccelerometer);
             var flashlightButton = FindViewById<Button>(Resource.Id.flashlightButton);
             var vibrateButton = FindViewById<Button>(Resource.Id.toVibrate);
             var returnButton = FindViewById<Button>(Resource.Id.returnButton);
+            bool on = false;
 
 
             //Accelerometer essential
@@ -33,11 +34,12 @@ namespace MobileApp
             {
                 Intent intent = new Intent(this, typeof(AccelerometerActivity));
                 StartActivity(intent);
+                Flashlight.TurnOffAsync();
             };
 
 
             //Flashlight essential
-            bool on = false;
+            
             flashlightButton.Click += async delegate
             {                
                 if (!on)
@@ -56,6 +58,7 @@ namespace MobileApp
             {
                 Intent intent = new Intent(this, typeof(VibrateActivity));
                 StartActivity(intent);
+                Flashlight.TurnOffAsync();
             };
 
 
@@ -64,6 +67,7 @@ namespace MobileApp
             {
                 Intent intent = new Intent(this, typeof(MainActivity));
                 StartActivity(intent);
+                Flashlight.TurnOffAsync();
             };
 
         }

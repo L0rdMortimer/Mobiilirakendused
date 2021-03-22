@@ -9,9 +9,9 @@
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/accelerometerButton" />
+        android:id="@+id/toAccelerometer" />
     <Button
-        android:text="@string/to_flashlight"
+        android:text="@string/flashlight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/flashlightButton" />
