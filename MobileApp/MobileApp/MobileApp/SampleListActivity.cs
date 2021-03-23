@@ -27,9 +27,9 @@ namespace MobileApp
 
             items = new List<Car>
             {
-                new Car { Manufacturer = "Volvo", Model = "S40", KW = 65 },
-                new Car { Manufacturer = "Volvo", Model = "S60", KW = 85 },
-                new Car { Manufacturer = "Volvo", Model = "S80", KW = 105 },
+                new Car { Manufacturer = "Volvo", Model = "S40", KW = 65, Image = Resource.Drawable.volvos40 },
+                new Car { Manufacturer = "Volvo", Model = "S60", KW = 85, Image = Resource.Drawable.volvos60 },
+                new Car { Manufacturer = "Volvo", Model = "S80", KW = 105, Image = Resource.Drawable.volvos80 },
                 new Car { Manufacturer = "Volkswagen", Model = "Passat", KW = 45 },
                 new Car { Manufacturer = "Ford2", Model = "Focus2", KW = 45 },
                 new Car { Manufacturer = "Ford3", Model = "Focus3", KW = 67 },
@@ -52,6 +52,12 @@ namespace MobileApp
             };
 
             listView.Adapter = new CarAdapter(this, items);
+
+            listView.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs args)
+            {
+                var postition = items[args.Position].Model;
+                Toast.MakeText(this, postition, ToastLength.Long).Show();
+            };
 
 
 

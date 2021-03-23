@@ -17,5 +17,7 @@ namespace MobileApp.Model
         public string Model { get; set; }
         public int KW { get; set; }
 
+        public int Image { get; set; }
+
     }
 }
