@@ -4,21 +4,30 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <EditText
+    <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/goA" />
-    <Button
-        android:text="@string/go_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/goButton" />
-
+        android:columnCount="2"
+        android:rowCount="1">
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/goA"
+            android:layout_column="0"/>
+        <Button
+            android:text="@string/go_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/goButton" 
+            android:layout_column="1"
+            android:layout_gravity="right"/>
+    </GridLayout>
     <android.webkit.WebView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minWidth="25px"
         android:minHeight="25px"
         android:id="@+id/web" />
+
 
 </LinearLayout>

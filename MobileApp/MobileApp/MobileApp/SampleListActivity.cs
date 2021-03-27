@@ -24,6 +24,13 @@ namespace MobileApp
             // Create your application here
             
             var listView = FindViewById<ListView>(Resource.Id.carList);
+            var returnButton = FindViewById<Button>(Resource.Id.returnButton);
+
+            returnButton.Click += delegate
+            {
+                Intent intent = new Intent(this, typeof(MainActivity));
+                StartActivity(intent);
+            };
 
             items = new List<Car>
             {
@@ -55,8 +62,24 @@ namespace MobileApp
 
             listView.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs args)
             {
-                var postition = items[args.Position].Model;
-                Toast.MakeText(this, postition, ToastLength.Long).Show();
+                /*var model = items[args.Position].Model;
+                Toast.MakeText(this, model, ToastLength.Long).Show();*/
+                
+
+                SetContentView(Resource.Layout.car_info_layout);
+                FindViewById<TextView>(Resource.Id.carInfoManufacturer).Text = items[args.Position].Manufacturer;
+                FindViewById<TextView>(Resource.Id.carInfoModel).Text = items[args.Position].Model;
+                FindViewById<TextView>(Resource.Id.carInfoKW).Text = items[args.Position].KW.ToString();
+                FindViewById<ImageView>(Resource.Id.carInfoImage).SetImageResource(items[args.Position].Image);
+                var returnButton = FindViewById<Button>(Resource.Id.returnButton);
+
+                returnButton.Click += delegate
+                {
+                    Intent intent = new Intent(this, typeof(SampleListActivity));
+                    StartActivity(intent);
+                };
+
+
             };
 
 

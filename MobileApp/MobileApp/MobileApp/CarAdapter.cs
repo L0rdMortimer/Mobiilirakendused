@@ -23,7 +23,7 @@ namespace MobileApp
             _items = items;
         }
 
-        public override Car this[int position]
+        public override Car this[int position] 
         {
             get { return _items[position]; }
         }
@@ -43,10 +43,10 @@ namespace MobileApp
             View view = convertView;
             if (view == null)
                 view = _context.LayoutInflater.Inflate(Resource.Layout.car_row_layout, null);
-            view.FindViewById<TextView>(Resource.Id.manufacturerText).Text = _items[position].Manufacturer;
-            view.FindViewById<TextView>(Resource.Id.modelText).Text = _items[position].Model;
-            view.FindViewById<TextView>(Resource.Id.kwText).Text = _items[position].KW.ToString();
-            view.FindViewById<ImageView>(Resource.Id.carImage).SetImageResource(_items[position].Image);
+                view.FindViewById<TextView>(Resource.Id.manufacturerText).Text = _items[position].Manufacturer;
+                view.FindViewById<TextView>(Resource.Id.modelText).Text = _items[position].Model;
+                view.FindViewById<TextView>(Resource.Id.kwText).Text = _items[position].KW.ToString();
+                //view.FindViewById<ImageView>(Resource.Id.carImage).SetImageResource(_items[position].Image);
             return view;
         }
     }
