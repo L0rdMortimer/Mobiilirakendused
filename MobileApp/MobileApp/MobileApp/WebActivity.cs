@@ -35,6 +35,14 @@ namespace MobileApp
                 goAddress.Text = "";
             };*/
 
+            var returnButton = FindViewById<Button>(Resource.Id.returnButton);
+
+            returnButton.Click += delegate
+            {                
+                Intent intent = new Intent(this, typeof(MainActivity));
+                StartActivity(intent);
+            };
+
             goButton.Click += delegate
             {   
                 //Check for address containing https and adding it if necessary.

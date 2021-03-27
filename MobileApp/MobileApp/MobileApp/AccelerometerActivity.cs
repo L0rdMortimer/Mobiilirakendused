@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -12,7 +13,7 @@ using Xamarin.Essentials;
 
 namespace MobileApp
 {
-    [Activity(Label = "AccelerometerActivity")]
+    [Activity(Label = "AccelerometerActivity", ScreenOrientation = ScreenOrientation.Portrait) ]
     public class AccelerometerActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

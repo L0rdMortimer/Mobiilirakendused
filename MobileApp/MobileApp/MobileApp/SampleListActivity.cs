@@ -34,9 +34,9 @@ namespace MobileApp
 
             items = new List<Car>
             {
-                new Car { Manufacturer = "Volvo", Model = "S40", KW = 65, Image = Resource.Drawable.volvos40 },
-                new Car { Manufacturer = "Volvo", Model = "S60", KW = 85, Image = Resource.Drawable.volvos60 },
-                new Car { Manufacturer = "Volvo", Model = "S80", KW = 105, Image = Resource.Drawable.volvos80 },
+                new Car { Manufacturer = "Volvo", Model = "S40", KW = 65, Image = Resource.Drawable.volvos40, Description = "Old gold" },
+                new Car { Manufacturer = "Volvo", Model = "S60", KW = 85, Image = Resource.Drawable.volvos60, Description = "Medium gold" }, 
+                new Car { Manufacturer = "Volvo", Model = "S80", KW = 95, Image = Resource.Drawable.volvos80, Description = "Just gold" },
                 new Car { Manufacturer = "Volkswagen", Model = "Passat", KW = 45 },
                 new Car { Manufacturer = "Ford2", Model = "Focus2", KW = 45 },
                 new Car { Manufacturer = "Ford3", Model = "Focus3", KW = 67 },
@@ -71,6 +71,8 @@ namespace MobileApp
                 FindViewById<TextView>(Resource.Id.carInfoModel).Text = items[args.Position].Model;
                 FindViewById<TextView>(Resource.Id.carInfoKW).Text = items[args.Position].KW.ToString();
                 FindViewById<ImageView>(Resource.Id.carInfoImage).SetImageResource(items[args.Position].Image);
+                FindViewById<TextView>(Resource.Id.carInfoDescription).Text = items[args.Position].Description;
+
                 var returnButton = FindViewById<Button>(Resource.Id.returnButton);
 
                 returnButton.Click += delegate
