@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
-        android:text="Large Text"
+        android:text=""
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/counterButton" />
     <TextView
-        android:text="Small Text"
+        android:text=""
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/toCalculator" />
     <Button
-        android:text="@string/to_webview"
+        android:text="@string/to_web"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/toWeb" />
@@ -43,5 +43,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/toList" />
+    <Button
+        android:text="@string/to_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toWeather" />
 
 </LinearLayout>

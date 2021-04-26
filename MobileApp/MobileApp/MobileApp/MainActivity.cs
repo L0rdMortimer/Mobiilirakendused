@@ -18,13 +18,14 @@ namespace MobileApp
             SetContentView(Resource.Layout.activity_main);
 
             var textView = FindViewById<TextView>(Resource.Id.welcomeText);
-            var counterView = FindViewById<TextView>(Resource.Id.counterText);
             var counterButton = FindViewById<Button>(Resource.Id.counterButton);
+            var counterView = FindViewById<TextView>(Resource.Id.counterText);           
             int counter = 0;
             var toCalculatorButton = FindViewById<Button>(Resource.Id.toCalculator);
             var toWebButton = FindViewById<Button>(Resource.Id.toWeb);
             var toEssentialsButton = FindViewById<Button>(Resource.Id.toEssentials);
             var toListButton = FindViewById<Button>(Resource.Id.toList);
+            var toWeatherButton = FindViewById<Button>(Resource.Id.toWeather);
 
             counterButton.Click += delegate
             {
@@ -55,6 +56,12 @@ namespace MobileApp
             toListButton.Click += delegate
             {
                 Intent intent = new Intent(this, typeof(SampleListActivity));
+                StartActivity(intent);
+            };
+
+            toWeatherButton.Click += delegate
+            {
+                Intent intent = new Intent(this, typeof(WeatherActivity));
                 StartActivity(intent);
             };
 
